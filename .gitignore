@@ -9,3 +9,25 @@ __pycache__/
 *.pyc
 .venv/
 aws_graph_output/
+
+# Generated research datasets
+datasets/synthetic/
+datasets/labeled/
+datasets/processed/
+
+# Trained machine learning models
+models/*.pt
+models/*.pth
+
+# AWS configurations
+aws_graph_output/
+.aws/
+.env
+.env.*
+*.pem
+*.key
+
+# Python and macOS
+__pycache__/
+*.pyc
+.DS_Store

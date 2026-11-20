@@ -1,0 +1,35 @@
+{
+    "project": "GraphML-CloudSecurity",
+    "source": "synthetic",
+    "labeled": true,
+    "label_method": "simulated_attack_paths_v1",
+    "severity_threshold": 7.0,
+    "total_graphs": 20000,
+    "total_nodes": 868776,
+    "total_edges": 1125176,
+    "high_risk_nodes": 106552,
+    "negative_nodes": 742224,
+    "excluded_internet_nodes": 20000,
+    "high_risk_percentage": 12.55,
+    "total_attack_paths": 70572,
+    "graphs_with_attack_paths": 14487,
+    "graphs_without_attack_paths": 5513,
+    "total_reachable_critical_assets": 54089,
+    "resource_counts": {
+        "internet": 20000,
+        "ec2": 249595,
+        "iam": 200102,
+        "s3": 399079
+    },
+    "high_risk_by_resource_type": {
+        "ec2": 27621,
+        "iam": 24842,
+        "s3": 54089
+    },
+    "dataset_splits": {
+        "train": 14000,
+        "validation": 3000,
+        "test": 3000
+    },
+    "execution_time_seconds": 29.17
+}

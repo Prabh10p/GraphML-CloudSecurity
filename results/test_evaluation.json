@@ -1,0 +1,185 @@
+{
+    "project": "GraphML-CloudSecurity",
+    "evaluation": "independent_test",
+    "source": "synthetic",
+    "test_graphs": 3000,
+    "supervised_test_nodes": 127074,
+    "positive_test_nodes": 15663,
+    "negative_test_nodes": 111411,
+    "model_epoch": 47,
+    "decision_threshold": 0.84,
+    "threshold_selected_using": "validation_dataset",
+    "graphsage_metrics": {
+        "accuracy": 0.9972929159387444,
+        "precision": 0.9872145537815661,
+        "recall": 0.9908702036646875,
+        "f1": 0.9890390007647208,
+        "average_precision": 0.9994445356707027,
+        "threshold": 0.84,
+        "confusion_matrix": [
+            [
+                111210,
+                201
+            ],
+            [
+                143,
+                15520
+            ]
+        ],
+        "roc_auc": 0.9999254795257037
+    },
+    "severity_baseline_metrics": {
+        "accuracy": 0.8531406896768812,
+        "precision": 0.3645315746679917,
+        "recall": 0.2576134840068952,
+        "f1": 0.30188538081699834,
+        "average_precision": 0.18490005661837694,
+        "threshold": 0.7,
+        "confusion_matrix": [
+            [
+                104377,
+                7034
+            ],
+            [
+                11628,
+                4035
+            ]
+        ],
+        "roc_auc": 0.5109952812154097
+    },
+    "majority_baseline_metrics": {
+        "accuracy": 0.8767411114783512,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "average_precision": 0.1232588885216488,
+        "threshold": 0.5,
+        "confusion_matrix": [
+            [
+                111411,
+                0
+            ],
+            [
+                15663,
+                0
+            ]
+        ],
+        "roc_auc": 0.5
+    },
+    "resource_type_metrics": {
+        "EC2": {
+            "total_resources": 37133,
+            "positive_resources": 4050,
+            "metrics": {
+                "accuracy": 0.9992459537338755,
+                "precision": 0.993860510805501,
+                "recall": 0.9992592592592593,
+                "f1": 0.9965525732578183,
+                "average_precision": 0.99998023234362,
+                "threshold": 0.84,
+                "confusion_matrix": [
+                    [
+                        33058,
+                        25
+                    ],
+                    [
+                        3,
+                        4047
+                    ]
+                ],
+                "roc_auc": 0.9999975743761575
+            }
+        },
+        "IAM": {
+            "total_resources": 29900,
+            "positive_resources": 3659,
+            "metrics": {
+                "accuracy": 0.9980936454849498,
+                "precision": 0.9899347116430903,
+                "recall": 0.9945340256900792,
+                "f1": 0.9922290388548057,
+                "average_precision": 0.9997989831373666,
+                "threshold": 0.84,
+                "confusion_matrix": [
+                    [
+                        26204,
+                        37
+                    ],
+                    [
+                        20,
+                        3639
+                    ]
+                ],
+                "roc_auc": 0.9999719837832138
+            }
+        },
+        "S3": {
+            "total_resources": 60041,
+            "positive_resources": 7954,
+            "metrics": {
+                "accuracy": 0.9956862810412884,
+                "precision": 0.9825661607926752,
+                "recall": 0.9849132511943676,
+                "f1": 0.9837383060212218,
+                "average_precision": 0.9990641082322339,
+                "threshold": 0.84,
+                "confusion_matrix": [
+                    [
+                        51948,
+                        139
+                    ],
+                    [
+                        120,
+                        7834
+                    ]
+                ],
+                "roc_auc": 0.9998590176194014
+            }
+        }
+    },
+    "ec2_only_comparison": {
+        "graphsage": {
+            "accuracy": 0.9992459537338755,
+            "precision": 0.993860510805501,
+            "recall": 0.9992592592592593,
+            "f1": 0.9965525732578183,
+            "average_precision": 0.99998023234362,
+            "threshold": 0.84,
+            "confusion_matrix": [
+                [
+                    33058,
+                    25
+                ],
+                [
+                    3,
+                    4047
+                ]
+            ],
+            "roc_auc": 0.9999975743761575
+        },
+        "severity_baseline": {
+            "accuracy": 0.8101688525031643,
+            "precision": 0.3645315746679917,
+            "recall": 0.9962962962962963,
+            "f1": 0.5337654606786163,
+            "average_precision": 0.3616503986201804,
+            "threshold": 0.7,
+            "confusion_matrix": [
+                [
+                    26049,
+                    7034
+                ],
+                [
+                    15,
+                    4035
+                ]
+            ],
+            "roc_auc": 0.8921420049758875
+        }
+    },
+    "f1_improvement_over_severity": 0.6871536199477225,
+    "ap_improvement_over_severity": 0.8145444790523257,
+    "inference_time_seconds": 0.3183,
+    "resources_per_second": 399270.8,
+    "evaluation_time_seconds": 4.82
+}

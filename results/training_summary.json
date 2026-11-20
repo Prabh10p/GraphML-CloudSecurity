@@ -1,0 +1,44 @@
+{
+    "project": "GraphML-CloudSecurity",
+    "model": "GraphSAGE",
+    "device": "cpu",
+    "random_seed": 42,
+    "input_features": 8,
+    "hidden_dimensions": [
+        64,
+        64,
+        32
+    ],
+    "trainable_parameters": 13505,
+    "training_graphs": 14000,
+    "validation_graphs": 3000,
+    "maximum_epochs": 50,
+    "completed_epochs": 50,
+    "best_epoch": 47,
+    "batch_size": 64,
+    "initial_learning_rate": 0.001,
+    "positive_class_weight": 6.9151,
+    "decision_threshold": 0.84,
+    "validation_metrics": {
+        "accuracy": 0.9977917857562351,
+        "precision": 0.9896783938573857,
+        "recall": 0.9925519156725368,
+        "f1": 0.9911130719778142,
+        "average_precision": 0.9996459551878931,
+        "threshold": 0.84,
+        "confusion_matrix": [
+            [
+                111698,
+                164
+            ],
+            [
+                118,
+                15725
+            ]
+        ],
+        "roc_auc": 0.9999505797687059
+    },
+    "test_set_used": false,
+    "training_time_seconds": 193.91,
+    "model_path": "/Users/prabhsandhu/Desktop/Graph Machine Learning/models/best_graphsage.pt"
+}

@@ -1,0 +1,183 @@
+{
+    "project": "GraphML-CloudSecurity",
+    "experiment": "baseline_and_ablation",
+    "source": "synthetic",
+    "random_seed": 42,
+    "training_graphs": 14000,
+    "validation_graphs": 3000,
+    "test_graphs": 3000,
+    "models": {
+        "Logistic Regression": {
+            "threshold": 0.58,
+            "validation_metrics": {
+                "accuracy": 0.7774558552914921,
+                "precision": 0.3261740885092739,
+                "recall": 0.7448084327463232,
+                "f1": 0.45367166474432913,
+                "average_precision": 0.40144791289456194,
+                "threshold": 0.58,
+                "confusion_matrix": [
+                    [
+                        87485,
+                        24377
+                    ],
+                    [
+                        4043,
+                        11800
+                    ]
+                ],
+                "roc_auc": 0.8554322239293787
+            },
+            "test_metrics": {
+                "accuracy": 0.7770983836189936,
+                "precision": 0.3240509143460619,
+                "recall": 0.744429547340867,
+                "f1": 0.45154419595314166,
+                "average_precision": 0.3981814244281826,
+                "threshold": 0.58,
+                "confusion_matrix": [
+                    [
+                        87089,
+                        24322
+                    ],
+                    [
+                        4003,
+                        11660
+                    ]
+                ],
+                "roc_auc": 0.8550940023602212
+            }
+        },
+        "Feature MLP": {
+            "best_epoch": 15,
+            "threshold": 0.7,
+            "validation_metrics": {
+                "accuracy": 0.7866254257859912,
+                "precision": 0.3402610498011316,
+                "recall": 0.7667739695764691,
+                "f1": 0.4713551265884179,
+                "average_precision": 0.4323603139630913,
+                "threshold": 0.7,
+                "confusion_matrix": [
+                    [
+                        88308,
+                        23554
+                    ],
+                    [
+                        3695,
+                        12148
+                    ]
+                ],
+                "roc_auc": 0.869485189229419
+            },
+            "training_time_seconds": 39.27,
+            "test_metrics": {
+                "accuracy": 0.7861324897303933,
+                "precision": 0.33793142278024885,
+                "recall": 0.7663921343293111,
+                "f1": 0.4690436651362704,
+                "average_precision": 0.42572254625517975,
+                "threshold": 0.7,
+                "confusion_matrix": [
+                    [
+                        87893,
+                        23518
+                    ],
+                    [
+                        3659,
+                        12004
+                    ]
+                ],
+                "roc_auc": 0.8694236293210723
+            }
+        },
+        "Randomized GraphSAGE": {
+            "best_epoch": 50,
+            "threshold": 0.7,
+            "validation_metrics": {
+                "accuracy": 0.8666457852080968,
+                "precision": 0.47015638356715445,
+                "recall": 0.5901660039134002,
+                "f1": 0.5233697173243773,
+                "average_precision": 0.5395335453384329,
+                "threshold": 0.7,
+                "confusion_matrix": [
+                    [
+                        101325,
+                        10537
+                    ],
+                    [
+                        6493,
+                        9350
+                    ]
+                ],
+                "roc_auc": 0.8919838434755103
+            },
+            "training_time_seconds": 158.77,
+            "test_metrics": {
+                "accuracy": 0.8668885846042463,
+                "precision": 0.4684761808842784,
+                "recall": 0.5939475196322543,
+                "f1": 0.5238028208665296,
+                "average_precision": 0.53392015007687,
+                "threshold": 0.7,
+                "confusion_matrix": [
+                    [
+                        100856,
+                        10555
+                    ],
+                    [
+                        6360,
+                        9303
+                    ]
+                ],
+                "roc_auc": 0.8913936600189828
+            }
+        },
+        "Original GraphSAGE": {
+            "threshold": 0.84,
+            "best_epoch": 47,
+            "test_metrics": {
+                "accuracy": 0.9972929159387444,
+                "precision": 0.9872145537815661,
+                "recall": 0.9908702036646875,
+                "f1": 0.9890390007647208,
+                "average_precision": 0.9994445356707027,
+                "threshold": 0.84,
+                "confusion_matrix": [
+                    [
+                        111210,
+                        201
+                    ],
+                    [
+                        143,
+                        15520
+                    ]
+                ],
+                "roc_auc": 0.9999254795257037
+            }
+        },
+        "Exact Graph Rules": {
+            "test_metrics": {
+                "accuracy": 1.0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "average_precision": 1.0,
+                "threshold": 0.5,
+                "confusion_matrix": [
+                    [
+                        111411,
+                        0
+                    ],
+                    [
+                        0,
+                        15663
+                    ]
+                ],
+                "roc_auc": 1.0
+            }
+        }
+    },
+    "execution_time_seconds": 207.6
+}

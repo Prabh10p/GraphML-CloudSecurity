@@ -1,0 +1,36 @@
+{
+    "project": "GraphML-CloudSecurity",
+    "cloud_provider": "AWS",
+    "source": "synthetic",
+    "schema_version": 1,
+    "random_seed": 42,
+    "labeled": false,
+    "total_graphs": 20000,
+    "total_nodes": 868776,
+    "total_edges": 1125176,
+    "resource_counts": {
+        "internet": 20000,
+        "ec2": 249595,
+        "iam": 200102,
+        "s3": 399079
+    },
+    "relationship_counts": {
+        "network_reachability": 124991,
+        "uses_role": 249595,
+        "permitted_access": 750590
+    },
+    "security_statistics": {
+        "internet_exposed_ec2": 124991,
+        "high_severity_ec2": 75144,
+        "overprivileged_iam_roles": 99993,
+        "critical_s3_buckets": 199683
+    },
+    "average_nodes_per_graph": 43.44,
+    "average_edges_per_graph": 56.26,
+    "planned_dataset_split": {
+        "training": 14000,
+        "validation": 3000,
+        "testing": 3000
+    },
+    "generation_time_seconds": 23.26
+}
