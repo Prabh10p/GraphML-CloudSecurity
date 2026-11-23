@@ -31,3 +31,27 @@ aws_graph_output/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Generated datasets
+datasets/synthetic/
+datasets/labeled/
+datasets/processed/
+
+# Private AWS information
+.aws/
+.env
+.env.*
+*.pem
+*.key
+results/aws_adapter/
+aws_graph_output/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# Logs
+*.log
