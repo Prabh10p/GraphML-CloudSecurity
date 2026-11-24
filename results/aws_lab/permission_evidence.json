@@ -1,0 +1,86 @@
+[
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:GetObject",
+    "decision": "implicitDeny",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:PutObject",
+    "decision": "implicitDeny",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:DeleteObject",
+    "decision": "implicitDeny",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:GetObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:PutObject",
+    "decision": "implicitDeny",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Secure-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:DeleteObject",
+    "decision": "implicitDeny",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:GetObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:PutObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-critical-2026",
+    "action": "s3:DeleteObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:GetObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:PutObject",
+    "decision": "allowed",
+    "resource_validated": true
+  },
+  {
+    "role": "GraphML-Risky-EC2-Role",
+    "bucket": "graphml-lab-noncritical-2026",
+    "action": "s3:DeleteObject",
+    "decision": "allowed",
+    "resource_validated": true
+  }
+]

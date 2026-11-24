@@ -1,0 +1,136 @@
+{
+  "collected_at": "2026-11-24T17:44:29.028308+00:00",
+  "region": "us-east-1",
+  "source": "real_aws_configuration_and_simulation",
+  "nodes": [
+    {
+      "id": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "criticality": 1,
+      "criticality_source": "research_design"
+    },
+    {
+      "id": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "criticality": 0,
+      "criticality_source": "research_design"
+    },
+    {
+      "id": "i-09f9474e52379e1de",
+      "name": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "public_ip_present": false,
+      "state": "running",
+      "vulnerability_severity": null,
+      "internet_reachability": null,
+      "s3_network_reachability": null,
+      "inbound_rules": [],
+      "outbound_rules": [],
+      "inbound_rule_count": 0,
+      "outbound_rule_count": 0
+    },
+    {
+      "id": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "privilege": 0,
+      "allowed_permission_count": 1,
+      "permission_checks_complete": true,
+      "critical_asset_access": false
+    },
+    {
+      "id": "i-0c439720ae1baf17f",
+      "name": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "public_ip_present": false,
+      "state": "running",
+      "vulnerability_severity": null,
+      "internet_reachability": null,
+      "s3_network_reachability": null,
+      "inbound_rules": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "Excessive internal network access",
+              "CidrIp": "10.50.0.0/16"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "outbound_rules": [],
+      "inbound_rule_count": 1,
+      "outbound_rule_count": 0
+    },
+    {
+      "id": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "privilege": 1,
+      "allowed_permission_count": 6,
+      "permission_checks_complete": true,
+      "critical_asset_access": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "i-09f9474e52379e1de",
+      "target": "GraphML-Secure-EC2-Role",
+      "relationship": "instance_profile_role",
+      "evidence": "GetInstanceProfile",
+      "evidence_type": "configuration"
+    },
+    {
+      "source": "GraphML-Secure-EC2-Role",
+      "target": "graphml-lab-noncritical-2026",
+      "relationship": "simulated_s3_permission",
+      "actions": [
+        "s3:GetObject"
+      ],
+      "tested_object": "test.txt",
+      "evidence": "SimulatePrincipalPolicy",
+      "evidence_type": "policy_simulation"
+    },
+    {
+      "source": "i-0c439720ae1baf17f",
+      "target": "GraphML-Risky-EC2-Role",
+      "relationship": "instance_profile_role",
+      "evidence": "GetInstanceProfile",
+      "evidence_type": "configuration"
+    },
+    {
+      "source": "GraphML-Risky-EC2-Role",
+      "target": "graphml-lab-critical-2026",
+      "relationship": "simulated_s3_permission",
+      "actions": [
+        "s3:DeleteObject",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "tested_object": "test.txt",
+      "evidence": "SimulatePrincipalPolicy",
+      "evidence_type": "policy_simulation"
+    },
+    {
+      "source": "GraphML-Risky-EC2-Role",
+      "target": "graphml-lab-noncritical-2026",
+      "relationship": "simulated_s3_permission",
+      "actions": [
+        "s3:DeleteObject",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "tested_object": "test.txt",
+      "evidence": "SimulatePrincipalPolicy",
+      "evidence_type": "policy_simulation"
+    }
+  ],
+  "limitations": [
+    "IAM simulation is not runtime S3 access.",
+    "Internet reachability is not established.",
+    "Software vulnerability severity is unknown.",
+    "Criticality is assigned by research design.",
+    "Graph is not yet compatible with the original model."
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "model_epoch": 47,
+  "threshold": 0.84,
+  "real_aws_nodes": 6,
+  "real_aws_edges": 5,
+  "severity_scenarios": [
+    0,
+    3,
+    5,
+    7,
+    9,
+    10
+  ],
+  "total_predictions": 36,
+  "evaluation_type": "exploratory_ood",
+  "limitations": [
+    "Original model trained on synthetic data.",
+    "Unknown EC2 severity tested hypothetically.",
+    "Internet exposure assumed zero.",
+    "No Internet source node in real lab graph.",
+    "Internal exposure not represented.",
+    "IAM permissions based on policy simulation.",
+    "Scores are not calibrated real-world probabilities."
+  ],
+  "predictions": [
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.0015953188994899392,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 3.0837070889828217e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.807293882327107e-31,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 5.8379378432415075e-15,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.8535497613561166e-32,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 0,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.0089818403002937e-07,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.023289306089282036,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.8235901530237226e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 8.175635272159442e-22,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.5491065421684445e-12,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.3918993133299725e-23,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 3,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.00019130815053358674,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.03720688447356224,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.414656410374739e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 3.6637478521319873e-19,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.90230200983288e-11,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.1876380632807784e-21,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 5,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.0011882393155246973,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.02687731757760048,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.347294527057565e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 8.9401994933364e-18,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.969640978094489e-10,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.917674108097374e-20,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 7,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.002342919586226344,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.01463465765118599,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 2.382022613197195e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 3.961986684614639e-18,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 4.548128262893414e-10,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.0488161452064388e-20,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 9,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.002625399734824896,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-critical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.04511794447898865,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-lab-noncritical-2026",
+      "resource_type": "s3",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 4.414898245536168e-16,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-secure-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 7.272569877614688e-19,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Secure-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 4.353724880612475e-10,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "graphml-risky-ec2",
+      "resource_type": "ec2",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 1.0643618092848939e-20,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    },
+    {
+      "resource": "GraphML-Risky-EC2-Role",
+      "resource_type": "iam",
+      "assumed_ec2_severity": 10,
+      "assumed_internet_exposure": 0,
+      "model_score": 0.003734245430678129,
+      "threshold": 0.84,
+      "prediction": 0,
+      "evaluation_type": "exploratory_ood"
+    }
+  ]
+}
